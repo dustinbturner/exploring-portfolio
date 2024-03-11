@@ -1,0 +1,95 @@
+---
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { Icon } from "astro-icon/components";
+import { ThemeToggle } from "@/components/theme-toggle";
+
+type Props = {
+  className?: string;
+};
+
+const { className } = Astro.props;
+---
+
+<footer class={cn(className)}>
+
+    <div class="px-4 py-12 mx-auto overflow-hidden max-w-7xl sm:px-6 lg:px-8">
+      <nav class="flex flex-wrap justify-center -mx-5 -my-2" aria-label="Footer">
+        <div class="px-5 py-2">
+          <a href="#" class="text-sm text-gray-500 hover:text-blue-600">
+            Next.js
+          </a>
+        </div>
+  
+        <div class="px-5 py-2">
+          <a href="#" class="text-sm text-gray-500 hover:text-blue-600">
+            Remix
+          </a>
+        </div>
+  
+        <div class="px-5 py-2">
+          <a href="#" class="text-sm text-gray-500 hover:text-blue-600">
+            Svelte
+          </a>
+        </div>
+  
+        <div class="px-5 py-2">
+          <a href="#" class="text-sm text-gray-500 hover:text-blue-600">
+            Alpine.js
+          </a>
+        </div>
+  
+        <div class="px-5 py-2">
+          <a href="#" class="text-sm text-gray-500 hover:text-blue-600">
+            Tailwind
+          </a>
+        </div>
+  
+        <div class="px-5 py-2">
+          <a href="#" class="text-sm text-gray-500 hover:text-blue-600">
+            Partners
+          </a>
+        </div>
+      </nav>
+      <div class="flex justify-center mt-8 space-x-6">
+        <span class="inline-flex justify-center w-full gap-3 m-auto md:justify-start md:w-auto">
+          <a class="w-6 h-6 transition fill-black hover:text-blue-500">
+            <span class="sr-only">
+              github
+            </span>
+            <ion-icon class="w-5 h-5 md hydrated" name="logo-github" role="img" aria-label="logo github"></ion-icon>
+          </a>
+          <a class="w-6 h-6 transition fill-black hover:text-blue-500">
+            <span class="sr-only">
+              twitter
+            </span>
+            <ion-icon class="w-5 h-5 md hydrated" name="logo-twitter" role="img" aria-label="logo twitter"></ion-icon>
+          </a>
+          <a class="w-6 h-6 transition fill-black hover:text-blue-500">
+            <span class="sr-only">
+              Instagram
+            </span>
+            <ion-icon class="w-5 h-5 md hydrated" name="logo-instagram" role="img" aria-label="logo instagram"></ion-icon>
+          </a>
+          <a class="w-6 h-6 transition fill-black hover:text-blue-500">
+            <span class="sr-only">
+              Linkedin
+            </span>
+            <ion-icon class="w-5 h-5 md hydrated" name="logo-linkedin" role="img" aria-label="logo linkedin"></ion-icon>
+          </a>
+        </span>
+      </div>
+      <p class="mt-8 text-center">
+        <span class="mx-auto mt-2 text-sm text-gray-500">
+          Copyright © 2020 - 2021
+          <a href="https://unwrapped.design" class="mx-2 text-blue-500 hover:text-gray-500" rel="noopener noreferrer">
+            @unwrappedHQ
+          </a>
+          .Since 2020
+          <ThemeToggle client:idle />
+        </span>
+
+      </p>
+      
+    </div>
+  </footer>            
